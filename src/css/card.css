@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+span{
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 0.5rem;
+}
+
+
+.card_button{
+    color: cornflowerblue;
+    font-size: 1rem;
+    transition: 1s;
+    border: none;
+    width: 30%;
+    margin: auto;
+}
+
+.card_button:hover{
+    transform: scale(1.2);  
+    color: black;
+}
+
+.card{
+    background-color: #20B2AA;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    align-items: flex-start;
+    overflow-y: hidden;
+    margin-top: 5px;
+    transition: 2s;
+    min-height: 500px;
+}
+
+.card_moreInfo_div{
+    display: flex;
+    align-items: flex-start;
+}
+
+.imageDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card img{
+    /* max-height: 250px; */
+    height: 250px;
+    max-width: 100%;
+    margin-top: 5px;
+    /* min-height: 250px; */
+}
+
+.viewMore{
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.hidden{
+    
+    display: none;
+}
+
+.show{
+    
+    display: block;
+}
+
+.clicked{
+    transform: scale(1.5);
+}
