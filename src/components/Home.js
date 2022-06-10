@@ -282,7 +282,7 @@ function Home() {
     
   return (
       <div className="container">
-      <Header  style={{zIndex: "1"}}/>
+      {/* <Header/> */}
       <div className="container__div">
         <h4 style={{display: "inline-block"}}>Filter by:</h4>
         <label htmlFor="checkboxFilterType" style={{marginRight: "3px", marginLeft: "8px"}}>Type</label><input name="checkboxFilterType" type="checkbox" onChange={handleCheckbox}/>
