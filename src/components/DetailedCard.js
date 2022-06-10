@@ -25,10 +25,10 @@ function DetailedCard(props) {
  
     
   return (
-      <div className='divBody'>
+      <div className='main_div'>
       {console.log("props:",item)}
-      {item && <div className="detailed">
-       <div className='divContainer'><img src={item.images.picture_url} alt=""/></div>
+      {item && <div className="main_div__div_container">
+       <div className='div_container__div'><img src={item.images.picture_url} alt=""/></div>
       <p><span>Name:</span> {item.name}</p>
       <p><span>Country:</span> {item.address.country}</p>
       <p><span>Street:</span> {item.address.street}</p>
@@ -44,8 +44,8 @@ function DetailedCard(props) {
       <p><span>Location:</span> {item.review_scores.review_scores_location}</p>
       <p><span>Rating:</span> {item.review_scores_rating}</p>
       
-       <div className='divContainer'>
-      <button id={item._id} onClick={btnClicked} className='detailed_button'>To Home</button>
+       <div className='div_container__div'>
+      <button id={item._id} onClick={btnClicked} className='main_div__div_container__button'>To Home</button>
       </div>
   </div>}
   </div>

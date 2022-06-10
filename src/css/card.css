@@ -6,16 +6,16 @@ span{
 }
 
 
-.card_button{
+.card__button{
     color: cornflowerblue;
     font-size: 1rem;
     transition: 1s;
     border: none;
     width: 30%;
-    margin: auto;
+    margin:auto;
 }
 
-.card_button:hover{
+.card__button:hover{
     transform: scale(1.2);  
     color: black;
 }
@@ -29,15 +29,15 @@ span{
     overflow-y: hidden;
     margin-top: 5px;
     transition: 2s;
-    min-height: 500px;
+    min-height: 550px;
 }
 
-.card_moreInfo_div{
+/* .card_moreInfo_div{
     display: flex;
     align-items: flex-start;
-}
+} */
 
-.imageDiv{
+.card__div_img{
     width: 100%;
     display: flex;
     justify-content: center;

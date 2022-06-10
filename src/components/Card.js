@@ -15,14 +15,14 @@ function moreInfoBtnClicked(e)
     <>
    
     <div className='card'>
-       <div className='imageDiv'><img src={props.data.images.picture_url} alt=""/></div>
+       <div className='card__div_img'><img src={props.data.images.picture_url} alt=""/></div>
         <p><span>Name:</span> {props.data.name}</p>
         <p><span>Country:</span> {props.data.address.country}</p>
         <p><span>Street:</span> {props.data.address.street}</p>
         <p><span>Price:</span> ${parseFloat(props.data.price['$numberDecimal']).toFixed(2)}</p>
         <p><span>Property type:</span> {props.data.property_type}</p>
 
-        <button id={props.data._id} onClick={moreInfoBtnClicked} className='card_button'>View more...</button>
+        <button id={props.data._id} onClick={moreInfoBtnClicked} className='card__button'>View more...</button>
     </div>
     </>
   )
