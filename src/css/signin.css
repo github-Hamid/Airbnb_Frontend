@@ -1,0 +1,113 @@
+.signin-container{
+ 
+    background-attachment: fixed;
+   width: 100%;
+   text-align: center;
+   position: relative;
+  
+}
+
+.signin-form{
+    margin: auto;
+    width: 40%;
+    background-image: url(../../public/signup.webp);
+    margin-top: 2rem;
+    border : 5px solid black;
+    box-shadow: 5px 10px black;
+    font-weight: 700;
+}
+
+.form > label{
+    color:black;
+}
+
+.signin-form input:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px white;
+  border-color: transparent;
+}
+
+
+
+.signin-form input{
+    margin-bottom: 2rem;
+    transition: 0.5s;
+    border-radius: 8%;
+ 
+    
+}
+
+@keyframes submit_hover {
+    10%{
+        transform: rotate(10deg);
+       
+    }
+    50%{
+        transform: rotate(-10deg);
+       
+    }
+    90%{
+        transform: rotate(-10deg);
+      
+    }
+    100%{
+        transform: rotate(10deg);
+        
+    }
+}
+
+.signin-form > button{
+    transition: 1s;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    transition: 0.5s;
+    border-radius: 8%;
+}
+
+.signin-form > button:hover{
+animation: submit_hover 1s infinite linear;
+}
+
+.signin-form div{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+}
+
+.signin-form div > div{
+    display: block;
+    margin: 1rem 0 0 0;
+}
+
+#error-div{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border: 5px solid black;
+    display:none;
+    width: 30%;
+    height: auto;
+    text-align: start;
+     transition: 2s;
+    opacity: 0;
+    left: 35%;
+}
+
+#error-ul{
+    list-style-type: square
+}
+
+.signin-form input[type=password]{
+    position: relative;
+}
+
+.signin-form span{
+    position: absolute;
+}
+
+.signin-form span:hover{
+    cursor: pointer;
+}
+

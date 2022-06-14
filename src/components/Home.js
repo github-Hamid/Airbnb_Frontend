@@ -7,7 +7,7 @@ import Card from "./Card"
 import "../css/home.css"
 import { settings } from "../slider_config";
 import DetailedCard from './DetailedCard';
-
+//http://localhost:5000/Airbnb/api
 async function getListByPrice_type(price, type)
 {
   const response = await fetch(`http://localhost:5000/Airbnb/api/price&type?price=${price}&type=${type}`);
@@ -82,7 +82,7 @@ function Home() {
     function handleShowMoreBtn(id)
     {
       console.log("id: ",id);
-       fetch(`http://localhost:5000/Airbnb/api/id/${id}`)
+       fetch(`http://localhost:5000/Airbnb/api/id/${id}`, {mode:"no-cors"})
        .then((response)=>{
          response.json()
          .then((data)=>{
@@ -164,27 +164,7 @@ function Home() {
             setList(data);
           })
         }
-          //--------------------------------------------
-        //      getListByPrice_type(price, type)
-        //      .then((list)=>{
-        //       setList(list);
-        //      })
-        // }
-        // else if(checked[0].name === "checkboxFilterType")
-        // {
-        //   console.log("type");
-        //   getListByType(type)
-        //   .then((list)=>{
-        //     setList(list);
-        //   })
-        // }
-        // else
-        // {
-        //   getListByPrice(price)
-        //   .then((list)=>{
-        //     setList(list);
-        //   })
-        // }
+         
     }
   
     function handleCheckbox(e)
@@ -275,15 +255,14 @@ function Home() {
     .then((response)=>{
       response.json()
       .then((data)=>{
-          setList(data);
+        setList(data);
       })
     })
    },[])
     
   return (
       <div className="container">
-      {/* <Header/> */}
-      <div className="container__div">
+        <div className="container__div">
         <h4 style={{display: "inline-block"}}>Filter by:</h4>
         <label htmlFor="checkboxFilterType" style={{marginRight: "3px", marginLeft: "8px"}}>Type</label><input name="checkboxFilterType" type="checkbox" onChange={handleCheckbox}/>
         <label htmlFor="checkboxFilterPrice" style={{marginRight: "3px", marginLeft: "8px"}}>Price</label><input name="checkboxFilterPrice" type="checkbox" onChange={handleCheckbox}/>

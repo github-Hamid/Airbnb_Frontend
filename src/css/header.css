@@ -20,7 +20,6 @@
 }
 
 .header_div__img{
-   display: inline-block;
     height: 7rem;
     animation: Header-logo-spin infinite 20s linear;
    }
@@ -30,6 +29,7 @@
      float: right;
     
    }
+
 
     @keyframes show {
    from{
