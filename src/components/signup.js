@@ -55,7 +55,7 @@ function Signup() {
      }
      else 
      {
-      fetch("http://localhost:5000/Airbnb/api/signup",{
+      fetch("https://stark-crag-59840.herokuapp.com/Airbnb/api/signup",{
         method : "POST",
         body : JSON.stringify({fname : fname, lname : lname, email : email, password : password}),
         headers : {'Content-Type': 'application/json'}, 

@@ -10,7 +10,7 @@ import DetailedCard from './DetailedCard';
 //http://localhost:5000/Airbnb/api
 async function getListByPrice_type(price, type)
 {
-  const response = await fetch(`http://localhost:5000/Airbnb/api/price&type?price=${price}&type=${type}`);
+  const response = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/price&type?price=${price}&type=${type}`);
   const data = await response.json();
   console.log("data:", data);
   if(response.status === 200)
@@ -20,7 +20,7 @@ async function getListByPrice_type(price, type)
 
 async function getListByPrice(price)
 {
-  const response = await fetch(`http://localhost:5000/Airbnb/api/price/${price}`);
+  const response = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/price/${price}`);
   const data = await response.json();
   console.log("data:", data);
   if(response.status === 200)
@@ -30,7 +30,7 @@ async function getListByPrice(price)
 async function getListByType(type)
 {
   console.log("by type:");
-  const response = await fetch(`http://localhost:5000/Airbnb/api/type/${type}`);
+  const response = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/type/${type}`);
   const data = await response.json();
   console.log("data:", data);
   if(response.status === 200)
@@ -40,7 +40,7 @@ async function getListByType(type)
 async function getListByCountry(country)
 {
   console.log("by country:");
-  const response = await fetch(`http://localhost:5000/Airbnb/api/country/${country}`);
+  const response = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/country/${country}`);
   const data = await response.json();
   if(response.status === 200)
   return data;
@@ -49,7 +49,7 @@ async function getListByCountry(country)
 async function getListByPrice_country(price, country)
 {
   console.log("by price & country:");
-  const response  = await fetch(`http://localhost:5000/Airbnb/api/price&country?price=${price}&country=${country}`);
+  const response  = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/price&country?price=${price}&country=${country}`);
   const data = await response.json();
   if(response.status === 200)
   return data;
@@ -58,7 +58,7 @@ async function getListByPrice_country(price, country)
 async function getListByType_country(type, country)
 {
   console.log("by type & country");
-  const response = await fetch(`http://localhost:5000/Airbnb/api/type&country?type=${type}&country=${country}`);
+  const response = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/type&country?type=${type}&country=${country}`);
   const data = await response.json();
   if(response.status === 200)
   return data;
@@ -67,7 +67,7 @@ async function getListByType_country(type, country)
 async function getListByPrice_type_country(price, type, country)
 {
   console.log("by price & type & country");
-  const response = await fetch(`http://localhost:5000/Airbnb/api/price&type&country?price=${price}&type=${type}&country=${country}`);
+  const response = await fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/price&type&country?price=${price}&type=${type}&country=${country}`);
   const data = await response.json();
   if(response.status === 200)
   return data;
@@ -82,7 +82,7 @@ function Home() {
     function handleShowMoreBtn(id)
     {
       console.log("id: ",id);
-       fetch(`http://localhost:5000/Airbnb/api/id/${id}`, {mode:"no-cors"})
+       fetch(`https://stark-crag-59840.herokuapp.com/Airbnb/api/id/${id}`, {mode:"no-cors"})
        .then((response)=>{
          response.json()
          .then((data)=>{
@@ -251,7 +251,7 @@ function Home() {
 
 
    useEffect(()=>{
-    fetch("http://localhost:5000/Airbnb/api")
+    fetch("https://stark-crag-59840.herokuapp.com/Airbnb/api")
     .then((response)=>{
       response.json()
       .then((data)=>{
